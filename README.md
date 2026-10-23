@@ -4,13 +4,13 @@ Aplicación web backend desarrollada en PHP para la gestión, validación y cál
 
 ---
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 El objetivo de la aplicación es proporcionar una plataforma centralizada y segura para que los asistentes puedan registrar su participación en el evento, seleccionando el tipo de pase y talleres opcionales. La aplicación valida las restricciones de edad en tiempo real, calcula el coste total y emite un resguardo desglosado.
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 * **[index.php](file:///c:/xampp/htdocs/Act_servidor/Comic-ConDAW/index.php)**: Script principal que contiene la lógica de configuración, funciones de negocio con tipado estricto, control de excepciones, auditoría en servidor y la plantilla HTML/PHP con sintaxis alternativa.
 * **[estilos.css](file:///c:/xampp/htdocs/Act_servidor/Comic-ConDAW/estilos.css)**: Hoja de estilos limpia y ligera para el centrado del formulario, estados de error y el resguardo de la inscripción.
@@ -18,7 +18,7 @@ El objetivo de la aplicación es proporcionar una plataforma centralizada y segu
 
 ---
 
-## ⚙️ Características Técnicas y Cumplimiento de Requisitos
+## Características Técnicas y Cumplimiento de Requisitos
 
 ### 1. Configuración y Control Robusto de Errores
 * **Modo desarrollo activo**: Se configuran las directivas `ini_set('display_errors', '1')`, `display_startup_errors` y `error_reporting(E_ALL)` para la detección inmediata de advertencias o fallos durante la ejecución.
@@ -58,7 +58,7 @@ El objetivo de la aplicación es proporcionar una plataforma centralizada y segu
 
 ---
 
-## 🚀 Despliegue y Ejecución
+## Despliegue y Ejecución
 
 1. Clonar o ubicar la carpeta del proyecto en el directorio raíz del servidor web local:
    ```text
@@ -72,7 +72,7 @@ El objetivo de la aplicación es proporcionar una plataforma centralizada y segu
 
 ---
 
-## 🧪 Casos de Prueba Verificados
+## Casos de Prueba Verificados
 
 | Caso de Prueba | Datos de Entrada | Resultado Esperado |
 | :--- | :--- | :--- |

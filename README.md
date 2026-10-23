@@ -23,7 +23,11 @@ El objetivo de la aplicación es proporcionar una plataforma centralizada y segu
 ### 1. Configuración y Control Robusto de Errores
 * **Modo desarrollo activo**: Se configuran las directivas `ini_set('display_errors', '1')`, `display_startup_errors` y `error_reporting(E_ALL)` para la detección inmediata de advertencias o fallos durante la ejecución.
 * **Gestión con Try / Catch / Finally**: Todo el procesamiento del formulario (`POST`) se encapsula en una estructura `try-catch`. Cualquier fallo de validación interrumpe el flujo normal lanzando una `Exception` que es capturada para mostrar un mensaje amigable al usuario.
-* **Auditoría en Servidor (`finally`)**: Independientemente de si la operación resulta exitosa o fallida, el bloque `finally` ejecuta `error_log()`, registrando la fecha/hora actual y el resultado (`Exitoso` o `Fallido`) en el registro interno del servidor.
+* **Auditoría en Servidor (`finally`)**: Independientemente de si la operación resulta exitosa o fallida, el bloque `finally` ejecuta `error_log()`, registrando la fecha/hora actual y el resultado (`Exitoso` o `Fallido`) en el registro interno del servidor (`apache/logs/error.log`).
+
+  ![Registro de auditoría en error.log](resources/2026-10-23_18-29.png)
+
+  > **Auditoría en tiempo real:** La captura muestra la traza generada en el log del servidor tras las pruebas, registrando de forma independiente las inscripciones válidas (`Resultado: Exitoso`) y las excepciones capturadas (`Resultado: Fallido`).
 
 ### 2. Saneamiento y Seguridad de Datos
 * **Protección contra ataques XSS**: Todos los datos renderizados procedentes del usuario (`$_POST`) pasan por `htmlspecialchars()` al imprimirse en los campos y en el resguardo final.

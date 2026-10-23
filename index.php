@@ -110,15 +110,16 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción Comic-Con DAW 2026</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <div>
+    <div class="contenedor">
         <h1>Comic-Con DAW 2026 - Inscripción</h1>
 
         <?php if (!empty($mensajeError)): ?>
-            <div>
+            <div class="error">
                 <strong>Error:</strong> <?= htmlspecialchars($mensajeError) ?>
             </div>
         <?php endif; ?>
@@ -170,7 +171,7 @@ try {
         <!-- Renderizado de Resultados (El Resguardo) -->
         <?php if ($exito): ?>
             <hr>
-            <div>
+            <div class="resguardo">
                 <h2>Resguardo de Inscripción</h2>
                 <p><strong>Nombre del asistente:</strong> <?= htmlspecialchars($datosResguardo['nombre']) ?></p>
                 <p><strong>Tipo de entrada:</strong> <?= $datosResguardo['tipo'] ?> (<?= $datosResguardo['precio_base'] ?>

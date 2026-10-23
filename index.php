@@ -40,6 +40,11 @@ function procesarInscripcion(string $nombre, int $edad, string $tipoEntrada, arr
         throw new Exception("La entrada VIP está restringida a mayores de edad.");
     }
 
+    // Validación estricta: entrada Infantil
+    if ($tipoEntrada === 'Infantil' && $edad >= 18) {
+        throw new Exception("La entrada Infantil está restringida a menores de edad.");
+    }
+
     $precioBase = calcularPrecioBase($tipoEntrada);
     $costeTalleres = 0;
     $listaTalleres = [];
